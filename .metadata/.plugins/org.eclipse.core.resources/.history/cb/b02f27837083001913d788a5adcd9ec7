@@ -1,0 +1,10 @@
+package com.virtusa.inventory.invoiceservice.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class PointRewardServiceImpl {
+	
+	@Autowired
+	P
+
+}
