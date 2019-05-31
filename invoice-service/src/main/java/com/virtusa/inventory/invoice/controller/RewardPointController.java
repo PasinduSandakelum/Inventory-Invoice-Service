@@ -26,7 +26,8 @@ public class RewardPointController {
 		
 		List<RewardPoint> rewardPoints = rewardPointService.fetchAllRewardPoint();
 		
-		for (RewardPoint rewardPoint2 : rewardPoints) {
+		for (RewardPoint rewardPoints : rewardPoints) {
+			if
 			
 		}
 		
