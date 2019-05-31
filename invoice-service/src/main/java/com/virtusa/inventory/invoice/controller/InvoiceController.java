@@ -1,7 +1,7 @@
-package com.virtusa.inventory.invoiceservice.controller;
+package com.virtusa.inventory.invoice.controller;
 
-import com.virtusa.inventory.invoiceservice.model.Invoice;
-import com.virtusa.inventory.invoiceservice.service.InvoiceService;
+import com.virtusa.inventory.invoice.model.Invoice;
+import com.virtusa.inventory.invoice.service.InvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

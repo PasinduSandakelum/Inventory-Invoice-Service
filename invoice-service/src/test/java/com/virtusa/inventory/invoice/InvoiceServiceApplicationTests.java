@@ -1,4 +1,4 @@
-package com.virtusa.inventory.invoiceservice;
+package com.virtusa.inventory.invoice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

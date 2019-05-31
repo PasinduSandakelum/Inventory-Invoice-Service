@@ -1,4 +1,4 @@
-package com.virtusa.inventory.invoiceservice.exception;
+package com.virtusa.inventory.invoice.exception;
 
 public class InvoiceNotFoundException extends RuntimeException {
 }

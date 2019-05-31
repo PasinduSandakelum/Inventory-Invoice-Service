@@ -1,4 +1,4 @@
-package com.virtusa.inventory.invoiceservice.model;
+package com.virtusa.inventory.invoice.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,6 +20,10 @@ public class Invoice {
     private BigDecimal total;
 
     private Double discountAmount;
+
+    private Integer customerId;
+
+    private Integer userId;
 
     public Integer getId() {
         return id;
@@ -59,5 +63,21 @@ public class Invoice {
 
     public void setDiscountAmount(Double discountAmount) {
         this.discountAmount = discountAmount;
+    }
+
+    public Integer getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(Integer customerId) {
+        this.customerId = customerId;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 }

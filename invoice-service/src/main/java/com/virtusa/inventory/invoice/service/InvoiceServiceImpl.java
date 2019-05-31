@@ -1,7 +1,7 @@
-package com.virtusa.inventory.invoiceservice.service;
+package com.virtusa.inventory.invoice.service;
 
-import com.virtusa.inventory.invoiceservice.model.Invoice;
-import com.virtusa.inventory.invoiceservice.repository.InvoiceRepository;
+import com.virtusa.inventory.invoice.model.Invoice;
+import com.virtusa.inventory.invoice.repository.InvoiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

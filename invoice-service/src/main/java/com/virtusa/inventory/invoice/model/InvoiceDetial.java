@@ -1,4 +1,4 @@
-package com.virtusa.inventory.invoiceservice.model;
+package com.virtusa.inventory.invoice.model;
 
 import java.math.BigDecimal;
 
