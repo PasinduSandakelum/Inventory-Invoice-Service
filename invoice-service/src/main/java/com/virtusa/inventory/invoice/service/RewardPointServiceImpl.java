@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.virtusa.inventory.invoice.model.RewardPoint;
 import com.virtusa.inventory.invoice.repository.RewardPointRepository;
+import org.springframework.stereotype.Service;
 
 /**
  * @author user
