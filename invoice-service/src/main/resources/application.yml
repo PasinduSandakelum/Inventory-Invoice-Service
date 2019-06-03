@@ -1,13 +1,13 @@
 
 server:
-  port: 8085 
+  port: 8080 
   
   
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/invoicedb?createDatabaseIfNotExist=true
     username: root
-    password: 1qaz2wsx@
+    password: 950911379v
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

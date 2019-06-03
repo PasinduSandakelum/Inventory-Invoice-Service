@@ -6,6 +6,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+
+
 
 @Entity
 public class InvoiceDetail {
@@ -14,10 +17,12 @@ public class InvoiceDetail {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private Integer itemId;
-	private Integer quantity;
+	private Double quantity;
 	private BigDecimal amount;
 	private Integer invoiceId;
 	
+	@Transient
+	Item[] item;
 	
 	public Integer getId() {
 		return id;
@@ -31,12 +36,7 @@ public class InvoiceDetail {
 	public void setItemId(Integer itemId) {
 		this.itemId = itemId;
 	}
-	public Integer getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(Integer quantity) {
-		this.quantity = quantity;
-	}
+	
 	public BigDecimal getAmount() {
 		return amount;
 	}
@@ -49,6 +49,19 @@ public class InvoiceDetail {
 	public void setInvoiceId(Integer invoiceId) {
 		this.invoiceId = invoiceId;
 	}
+	public Double getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(Double quantity) {
+		this.quantity = quantity;
+	}
+	public Item[] getItem() {
+		return item;
+	}
+	public void setItem(Item[] item) {
+		this.item = item;
+	}
+	
 	
 	
 	

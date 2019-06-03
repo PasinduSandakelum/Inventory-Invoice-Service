@@ -4,14 +4,17 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.virtusa.inventory.invoice.model.RewardPoint;
 import com.virtusa.inventory.invoice.repository.RewardPointRepository;
+import org.springframework.stereotype.Service;
 
 /**
  * @author user
  *
  */
+@Service
 public class RewardPointServiceImpl implements RewardPointService {
 	
 	@Autowired

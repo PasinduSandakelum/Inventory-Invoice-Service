@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import com.virtusa.inventory.invoice.model.RewardPoint;
 
+
 public interface RewardPointService {
 
 	//save the rewardPoints

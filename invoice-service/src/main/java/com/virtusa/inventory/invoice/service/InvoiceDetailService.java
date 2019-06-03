@@ -6,10 +6,9 @@ import com.virtusa.inventory.invoice.model.InvoiceDetail;
 
 public interface InvoiceDetailService {
 
-	void delete(Integer id);
+	void save(InvoiceDetail invoiceDetail);
+	//InvoiceDetail fetchInvoiceItem(InvoiceDetail invoiceDetail);
 	
-	
-
 	InvoiceDetail update(InvoiceDetail invoiceDetail, Integer id);
-	
+	void delete(Integer id);
 }
