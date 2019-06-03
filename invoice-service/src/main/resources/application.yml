@@ -7,7 +7,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/invoicedb?createDatabaseIfNotExist=true
     username: root
-    password: 950911379v
+    password: 1qaz2wsx@
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
