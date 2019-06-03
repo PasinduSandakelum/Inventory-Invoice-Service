@@ -4676,3 +4676,15 @@ java.lang.Exception: Resource '/invoice-service' does not exist.
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:05:31.146
 !MESSAGE executing callback sts4.classpath.laEDNIYI SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:20:25.121
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.laEDNIYI
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:20:25.121
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.laEDNIYI
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:20:25.121
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-31 15:20:25.121
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.laEDNIYI => OK
