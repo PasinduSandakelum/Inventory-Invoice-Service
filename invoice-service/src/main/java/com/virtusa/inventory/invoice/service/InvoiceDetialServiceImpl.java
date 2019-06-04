@@ -1,5 +1,6 @@
 package com.virtusa.inventory.invoice.service;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -89,6 +90,11 @@ public class InvoiceDetialServiceImpl implements InvoiceDetailService {
 			
 			
 
+	}
+
+	@Override
+	public List<InvoiceDetail> findByInvoiceId(Integer invoiceId) {
+		return invoiceDetialRepository.findByinvoiceId(invoiceId);
 	}
 
 
