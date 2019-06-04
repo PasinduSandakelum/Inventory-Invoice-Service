@@ -45,4 +45,10 @@ public class Discount {
 		this.discount = discount;
 	}
 
+
+	@Override
+	public String toString(){
+		return id + " " + priceRange + " " + discount;
+	}
+
 }
