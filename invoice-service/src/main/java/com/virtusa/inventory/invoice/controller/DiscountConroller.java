@@ -35,7 +35,7 @@ public class DiscountConroller {
 	}
 	
 	@RequestMapping(value = "/discount", method = RequestMethod.POST)
-	public ResponseEntity<Discount> save(@RequestBody Discount discount) {
+	public ResponseEntity<Discount> update(@RequestBody Discount discount) {
 		
 		boolean matched = false;
 

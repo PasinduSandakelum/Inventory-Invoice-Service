@@ -27,9 +27,32 @@ public class RewardPointServiceImpl implements RewardPointService {
 	 */
 	@Override
 	public RewardPoint save(RewardPoint rewardPoint) {
-		return rewardPointRepository.save(rewardPoint); 	
+
+		//return rewardPointRepository.save(rewardPoint);
+
+		boolean match = false;
+		List<RewardPoint> rewardPoints = rewardPointRepository.findAll();
+
+		for (RewardPoint point : rewardPoints) {
+			if (point.getValue().equals(rewardPoint.getValue())) {
+				match = true;
+				break;
+			} else {
+				match = false;
+			}
+		}
+		if (rewardPoint.getValue() != null) {
+			if (match == false) {
+				return rewardPointRepository.save(rewardPoint);
+			} else {
+				return null;
+			}
+		} else {
+			return null;
+		}
+
 	}
-	
+
 	//fetch all rewardPoints 
 	/* (non-Javadoc)
 	 * @see com.virtusa.inventory.invoiceservice.service.RewardPointService#fetchAllRewardPoint()
@@ -57,4 +80,42 @@ public class RewardPointServiceImpl implements RewardPointService {
 		return rewardPointRepository.findByValue(value);
 	}
 	
+	@Override
+	public RewardPoint update(Integer id, RewardPoint rewardPoint){
+//		return rewardPointRepository.save(rewardPoint);
+
+		System.out.println("calling service update");
+
+
+		boolean match = false;
+		List<RewardPoint> rewardPoints = rewardPointRepository.findAll();
+
+		for (RewardPoint point : rewardPoints) {
+			if (point.getValue().equals(rewardPoint.getValue())) {
+				match = true;
+				break;
+			} else {
+				match = false;
+			}
+		}
+		if (rewardPoint.getValue() != null) {
+			if (match == true) {
+
+				System.out.println("awaaaa");
+				RewardPoint point = new RewardPoint();
+				point.setId(id);
+				point.setValue(rewardPoint.getValue());
+				point.setPoint(rewardPoint.getPoint());
+				return rewardPointRepository.save(point);
+			} else {
+				return null;
+			}
+		} else {
+			return null;
+		}
+
+	}
+
+
 }
+
