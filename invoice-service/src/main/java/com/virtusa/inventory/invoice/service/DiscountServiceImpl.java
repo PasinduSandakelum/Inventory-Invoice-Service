@@ -1,10 +1,13 @@
 package com.virtusa.inventory.invoice.service;
 
+import java.math.BigDecimal;
 import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Optional;
 import java.util.SortedMap;
 
+import com.virtusa.inventory.invoice.model.Invoice;
+import com.virtusa.inventory.invoice.repository.InvoiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +19,9 @@ public class DiscountServiceImpl implements DiscountService {
 
 	@Autowired
 	private DiscountRepository discountRepository;
+
+	@Autowired
+	private InvoiceRepository invoiceRepository;
 	
 	@Override
 	public List<Discount> fetchAll() {
@@ -96,6 +102,14 @@ public class DiscountServiceImpl implements DiscountService {
 	@Override
 	public void deleteAll() {
 		discountRepository.deleteAll();
+	}
+
+	public BigDecimal getDiscount(Invoice invoice){
+
+		List<Invoice> invoices = invoiceRepository.findAll();
+
+		Invoice invoice1 = invoices.stream().filter(i -> i.getTotal().compareTo(invoice.getTotal()))
+
 	}
 
 }
