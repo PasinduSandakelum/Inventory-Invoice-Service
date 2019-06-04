@@ -18,10 +18,13 @@ public interface RewardPointService {
 	Optional<RewardPoint> fetchById(Integer id);
 
 	//fetch by reward value
-	List<RewardPoint> fetchByRewardValue(Double value);
+//	List<RewardPoint> fetchByRewardValue(Double value);
 
 	//update the reward point
 	RewardPoint update(Integer id, RewardPoint rewardPoint);
+
+	//delete the reward point
+	void delete(Integer id);
 
 
 

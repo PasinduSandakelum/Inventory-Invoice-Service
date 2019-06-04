@@ -24,9 +24,9 @@ public class RewardPointController {
 	public ResponseEntity<RewardPoint> save(@RequestBody RewardPoint rewardPoint) {
 
 		RewardPoint point;
-		if ((point = rewardPointService.save(rewardPoint)) != null){
+		if ((point = rewardPointService.save(rewardPoint)) != null) {
 			return ResponseEntity.ok(point);
-		}else {
+		} else {
 			return ResponseEntity.badRequest().build();
 		}
 	}
@@ -34,47 +34,53 @@ public class RewardPointController {
 
 	//update the reward points
 	@RequestMapping(value = "/rewardpoint/{id}", method = RequestMethod.PUT)
-	public ResponseEntity<RewardPoint> update(@PathVariable Integer id,@RequestBody RewardPoint rewardPoint) {
+	public ResponseEntity<RewardPoint> update(@PathVariable Integer id, @RequestBody RewardPoint rewardPoint) {
 		Optional<RewardPoint> optionalRewardPoint = rewardPointService.fetchById(id);
 		if (!optionalRewardPoint.isPresent()) {
 			return ResponseEntity.notFound().build();
 		} else {
-			return ResponseEntity.ok(rewardPointService.update(id,rewardPoint));
+			return ResponseEntity.ok(rewardPointService.update(id, rewardPoint));
 		}
 	}
 
 
-
-
 	//fetch all reward points
 	@RequestMapping(value = "/rewardpoint", method = RequestMethod.GET)
-	public List<RewardPoint> fetchAll() {
-		return rewardPointService.fetchAllRewardPoint();
-
+	public ResponseEntity<?> fetchAll() {
+		return ResponseEntity.ok(rewardPointService.fetchAllRewardPoint());
 	}
 
 	//fetch reward points for a given id
 	@RequestMapping(value = "/rewardpoint/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Optional<RewardPoint>> fetchOne(@PathVariable Integer id) {
 
-		Optional<RewardPoint> optional =  rewardPointService.fetchById(id);
+		Optional<RewardPoint> optional = rewardPointService.fetchById(id);
 
-		if(optional.isPresent()) {
+		if (optional.isPresent()) {
 			return ResponseEntity.ok(optional);
-		}else {
-			return null;
+		} else {
+			return ResponseEntity.badRequest().build();
 		}
 
 	}
 
-	//fetch rewad point for a rlevant given value
-	@RequestMapping(value = "/rewardpoint/value", method = RequestMethod.GET)
-	public List<RewardPoint> fetchByValue(Double rewardValue) {
-		return rewardPointService.fetchByRewardValue(rewardValue);
+//	//fetch rewad point for a rlevant given value
+//	@RequestMapping(value = "/rewardpoint/value", method = RequestMethod.GET)
+//	public ResponseEntity<?> fetchByValue(Double value) {
+//		return ResponseEntity.ok(rewardPointService.fetchByRewardValue(value));
+//	}
+
+
+	@RequestMapping(value = "/rewardpoint/{id}", method = RequestMethod.DELETE)
+	public HttpStatus delete(@PathVariable Integer id) {
+		rewardPointService.delete(id);
+		return HttpStatus.OK;
 
 	}
 
-
-
 }
+
+
+
+
 
