@@ -20,4 +20,9 @@ public interface RewardPointService {
 	//fetch by reward value
 	List<RewardPoint> fetchByRewardValue(Double value);
 
+	//update the reward point
+	RewardPoint update(Integer id, RewardPoint rewardPoint);
+
+
+
 }

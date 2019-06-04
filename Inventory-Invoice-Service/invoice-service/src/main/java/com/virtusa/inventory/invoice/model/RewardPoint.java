@@ -1,9 +1,8 @@
 package com.virtusa.inventory.invoice.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import net.bytebuddy.implementation.bind.MethodDelegationBinder;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -27,6 +26,7 @@ public class RewardPoint {
 	 *
 	 */
 	@NotNull
+	@Column(unique = true)
 	Double value;
 	
 	/**

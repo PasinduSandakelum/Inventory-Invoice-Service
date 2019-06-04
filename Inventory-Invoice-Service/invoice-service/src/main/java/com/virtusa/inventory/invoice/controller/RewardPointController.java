@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import com.virtusa.inventory.invoice.model.RewardPoint;
 import com.virtusa.inventory.invoice.service.RewardPointService;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping(value = "/imscloud")
 public class RewardPointController {
@@ -35,6 +37,34 @@ public class RewardPointController {
 		}
 		if (rewardPoint.getValue() != null) {
 			if (match == false) {
+				return ResponseEntity.ok(rewardPointService.save(rewardPoint));
+			} else {
+				System.out.println("There is a value with this rewad value");
+
+				return null;
+			}
+		} else {
+			return null;
+		}
+	}
+
+
+	@RequestMapping(value = "/rewardpoint/{id}", method = RequestMethod.POST)
+	public ResponseEntity<RewardPoint> update(@PathVariable Integer id,@Valid @RequestBody RewardPoint rewardPoint) {
+
+		boolean match = false;
+		List<RewardPoint> rewardPoints = rewardPointService.fetchAllRewardPoint();
+
+		for (RewardPoint point : rewardPoints) {
+			if (point.getValue().equals(rewardPoint.getValue())) {
+				match = true;
+				break;
+			} else {
+				match = false;
+			}
+		}
+		if (rewardPoint.getValue() != null) {
+			if (match == true) {
 				return ResponseEntity.ok(rewardPointService.save(rewardPoint));
 			} else {
 				return null;

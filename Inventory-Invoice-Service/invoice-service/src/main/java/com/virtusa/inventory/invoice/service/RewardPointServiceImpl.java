@@ -56,5 +56,11 @@ public class RewardPointServiceImpl implements RewardPointService {
 	public List<RewardPoint> fetchByRewardValue(Double value) {
 		return rewardPointRepository.findByValue(value);
 	}
-	
+
+	@Override
+	public RewardPoint update(Integer id, RewardPoint rewardPoint) {
+		return rewardPointRepository.save(rewardPoint);
+	}
+
+
 }
