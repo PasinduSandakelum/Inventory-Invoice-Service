@@ -14,3 +14,19 @@ spring:
       ddl-auto: create
     show-sql: true
     
+
+
+#  application:
+#    name: item
+#    profiles:
+#     active: dev
+#     encrypt:
+#       key: web
+#       security:
+#              oauth2:
+#                resource:
+#                  token-info-uri: http://localhost:8090/oauth/check_token
+#                client:
+#                  client-id: web
+#                  client-secret: web
+    
