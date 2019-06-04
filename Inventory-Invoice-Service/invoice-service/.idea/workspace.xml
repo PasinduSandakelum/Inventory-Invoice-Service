@@ -1,131 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a83690dd-349e-4529-87ed-ec1bf19a97ac" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/10/f0f3152a6883001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/17/a030152a6883001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/23/402a975b7083001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/2b/60c61aa97483001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/3e/5031bb6c6a83001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/4/80ba26837083001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/40/b0391a2a6883001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/43/f09640687083001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/44/e0d1965c6e83001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/47/c0e1651e7083001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/52/201c58d06d83001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/6/d0b942687083001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/7/e00a62a37383001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/88/60a841687083001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/9d/f00d643f6883001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/9f/b0be24837083001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/ac/2069162a6883001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/b4/506d142a6883001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/c0/90ed975b7083001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/c4/3054dd496883001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/cb/b02f27837083001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/ce/c0a8f2397483001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/d1/704a122a6883001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.history/ef/a0cd17c57383001913d788a5adcd9ec7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.projects/invoice-service/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.projects/invoice-service/.indexes/properties.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/.root/.markers.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.resources/0.snap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.jdt.ui/jdt-images/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../../.metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/InvoiceServiceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/controller/DiscountConroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/controller/InvoiceController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/controller/InvoiceDetailController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/controller/RewardPointController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/exception/InvoiceNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/model/Discount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/model/Invoice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/model/InvoiceDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/model/RewardPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/repository/DiscountRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/repository/InvoiceDetailRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/repository/InvoiceRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/repository/RewardPointRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/service/DiscountService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/service/DiscountServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/service/InvoiceDetailService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/service/InvoiceDetialServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/service/InvoiceService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/service/InvoiceServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/service/RewardPointService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/java/com/virtusa/inventory/invoice/service/RewardPointServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/src/test/java/com/virtusa/inventory/invoice/InvoiceServiceApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoice-service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/invoice-service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/InvoiceServiceApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/controller/DiscountConroller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/controller/InvoiceController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/controller/InvoiceDetailController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/controller/RewardPointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/controller/RewardPointController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/exception/InvoiceNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/model/Discount.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/model/Invoice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/model/InvoiceDetail.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/model/Item.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/model/RewardPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/model/RewardPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/model/UOM.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/repository/DiscountRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/repository/InvoiceDetailRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/repository/InvoiceRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/repository/RewardPointRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/DiscountService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/DiscountServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/InvoiceDetailService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/InvoiceDetialServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/InvoiceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/InvoiceServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/RewardPointService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/RewardPointService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/RewardPointServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/RewardPointServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/virtusa/inventory/invoice/InvoiceServiceApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/InvoiceServiceApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/controller/DiscountConroller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/controller/InvoiceController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/controller/InvoiceDetailController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/controller/RewardPointController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/exception/InvoiceNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/model/Discount.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/model/Invoice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/model/InvoiceDetail.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/model/Item.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/model/RewardPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/model/UOM.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/repository/DiscountRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/repository/InvoiceDetailRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/repository/InvoiceRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/repository/RewardPointRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/service/DiscountService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/service/DiscountServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/service/InvoiceDetailService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/service/InvoiceDetialServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/service/InvoiceDetialServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/service/InvoiceService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/service/InvoiceServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/service/RewardPointService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/virtusa/inventory/invoice/service/RewardPointServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/virtusa/inventory/invoice/InvoiceServiceApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../invoice-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../invoice-service/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="a83690dd-349e-4529-87ed-ec1bf19a97ac" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -139,64 +15,7 @@
     <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/controller/RewardPointController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-266">
-              <caret line="59" column="29" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/RewardPointService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/service/RewardPointServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="61" column="53" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
-              <folding>
-                <element signature="e#1749#1750#0" expanded="true" />
-                <element signature="e#1765#1766#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/invoice-service.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-435" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/virtusa/inventory/invoice/model/RewardPoint.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -323,77 +142,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="invoice-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="invoice-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="invoice-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="invoice-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="invoice-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="invoice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="invoice-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="invoice" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="invoice-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="invoice" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="invoice-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="invoice" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="invoice-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="invoice-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
@@ -449,7 +198,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
