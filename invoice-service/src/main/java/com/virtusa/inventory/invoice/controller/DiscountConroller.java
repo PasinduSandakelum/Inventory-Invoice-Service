@@ -21,21 +21,20 @@ import javax.validation.Valid;
 @RequestMapping(value = "/imscloud")
 
 public class DiscountConroller {
-	
 	@Autowired
 	private DiscountService discountService;
-	
+
 	@RequestMapping(value = "/discount/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Optional<Discount>> fetchOne(@PathVariable Integer id) {
-		
+
 		Optional<Discount> optional;
-		
+
 		if((optional =  discountService.findOne(id)) != null) {
 			return ResponseEntity.ok(optional);
 		}else {
 			return null;
 		}
-		
+
 	}
 
 	@RequestMapping(value = "/discount", method = RequestMethod.GET)
@@ -44,7 +43,7 @@ public class DiscountConroller {
 		return ResponseEntity.ok(discountService.fetchAll());
 
 	}
-	
+
 	@RequestMapping(value = "/discount", method = RequestMethod.POST)
 	public ResponseEntity<Discount> save(@RequestBody Discount discount) {
 
@@ -113,5 +112,4 @@ public class DiscountConroller {
 		return HttpStatus.OK;
 
 	}
-
 }
