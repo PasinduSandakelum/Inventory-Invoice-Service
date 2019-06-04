@@ -8,9 +8,10 @@ import java.util.List;
 @Entity
 public class Invoice {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Integer id;
 
+    @Column(unique = true)
     private String code;
 
     private Date date;
