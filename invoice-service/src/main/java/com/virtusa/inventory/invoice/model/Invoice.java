@@ -1,11 +1,9 @@
 package com.virtusa.inventory.invoice.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Invoice {
@@ -24,6 +22,9 @@ public class Invoice {
     private Integer customerId;
 
     private Integer userId;
+
+    @OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL)
+    private List<InvoiceDetail> invoiceDetails;
 
     public Integer getId() {
         return id;
@@ -79,5 +80,13 @@ public class Invoice {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+
+    public List<InvoiceDetail> getInvoiceDetails() {
+        return invoiceDetails;
+    }
+
+    public void setInvoiceDetails(List<InvoiceDetail> invoiceDetails) {
+        this.invoiceDetails = invoiceDetails;
     }
 }
