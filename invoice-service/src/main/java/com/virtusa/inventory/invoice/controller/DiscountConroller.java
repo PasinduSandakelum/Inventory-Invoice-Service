@@ -21,31 +21,31 @@ import javax.validation.Valid;
 @RequestMapping(value = "/imscloud")
 
 public class DiscountConroller {
-	@Autowired
-	private DiscountService discountService;
+    @Autowired
+    private DiscountService discountService;
 
-	@RequestMapping(value = "/discount/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Optional<Discount>> fetchOne(@PathVariable Integer id) {
+    @RequestMapping(value = "/discount/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Optional<Discount>> fetchOne(@PathVariable Integer id) {
 
-		Optional<Discount> optional;
+        Optional<Discount> optional;
 
-		if((optional =  discountService.findOne(id)) != null) {
-			return ResponseEntity.ok(optional);
-		}else {
-			return null;
-		}
+        if ((optional = discountService.findOne(id)) != null) {
+            return ResponseEntity.ok(optional);
+        } else {
+            return null;
+        }
 
-	}
+    }
 
-	@RequestMapping(value = "/discount", method = RequestMethod.GET)
-	public ResponseEntity<List<Discount>> fetchAll() {
+    @RequestMapping(value = "/discount", method = RequestMethod.GET)
+    public ResponseEntity<List<Discount>> fetchAll() {
 
-		return ResponseEntity.ok(discountService.fetchAll());
+        return ResponseEntity.ok(discountService.fetchAll());
 
-	}
+    }
 
-	@RequestMapping(value = "/discount", method = RequestMethod.POST)
-	public ResponseEntity<Discount> save(@RequestBody Discount discount) {
+    @RequestMapping(value = "/discount", method = RequestMethod.POST)
+    public ResponseEntity<Discount> save(@RequestBody Discount discount) {
 
 //		boolean matched = false;
 //
@@ -72,44 +72,42 @@ public class DiscountConroller {
 //			return ResponseEntity.badRequest().build();
 //		}
 
-		Discount discount1;
+        Discount discount1;
 
-		if ((discount1 = discountService.save(discount)) != null){
-			return ResponseEntity.ok(discount1);
-		}
-		else {
-			return  ResponseEntity.badRequest().build();
-		}
+        if ((discount1 = discountService.save(discount)) != null) {
+            return ResponseEntity.ok(discount1);
+        } else {
+            return ResponseEntity.badRequest().build();
+        }
 
-	}
+    }
 
-	@RequestMapping(value = "/discount/{id}", method = RequestMethod.PUT)
-	public ResponseEntity<Discount> update(@PathVariable Integer id, @Valid @RequestBody Discount discount) {
+    @RequestMapping(value = "/discount/{id}", method = RequestMethod.PUT)
+    public ResponseEntity<Discount> update(@PathVariable Integer id, @Valid @RequestBody Discount discount) {
 
-		Discount discount1;
+        Discount discount1;
 
-		if ((discount1 = discountService.update(discount, id)) != null){
-			return ResponseEntity.ok(discount1);
-		}
-		else {
-			return  ResponseEntity.badRequest().build();
-		}
+        if ((discount1 = discountService.update(discount, id)) != null) {
+            return ResponseEntity.ok(discount1);
+        } else {
+            return ResponseEntity.badRequest().build();
+        }
 
-	}
+    }
 
-	@RequestMapping(value = "/discount/{id}", method = RequestMethod.DELETE)
-	public HttpStatus delete(@PathVariable Integer id) {
+    @RequestMapping(value = "/discount/{id}", method = RequestMethod.DELETE)
+    public HttpStatus delete(@PathVariable Integer id) {
 
-		discountService.delete(id);
-		return HttpStatus.OK;
+        discountService.delete(id);
+        return HttpStatus.OK;
 
-	}
+    }
 
-	@RequestMapping(value = "/discount", method = RequestMethod.DELETE)
-	public HttpStatus deleteAll() {
+    @RequestMapping(value = "/discount", method = RequestMethod.DELETE)
+    public HttpStatus deleteAll() {
 
-		discountService.deleteAll();
-		return HttpStatus.OK;
+        discountService.deleteAll();
+        return HttpStatus.OK;
 
-	}
+    }
 }

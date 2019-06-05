@@ -10,17 +10,9 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 public class Item {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(unique = true)
 	private String name;
-	@NotNull(message = "Sales price can not be null")
-	@Min(1)
 	private BigDecimal salesPrice;
-	@NotNull(message = "Unit price can not be null")
-	@Min(1)
 	private BigDecimal unitPrice;
 	private BigDecimal discount;
 	private UOM uom;

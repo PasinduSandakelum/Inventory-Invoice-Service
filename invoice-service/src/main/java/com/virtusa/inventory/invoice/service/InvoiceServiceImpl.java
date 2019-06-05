@@ -23,7 +23,6 @@ public class InvoiceServiceImpl implements InvoiceService {
 
     @Override
     public Invoice save(Invoice invoice){
-        invoice.setCode("INV-"+ new Date().hashCode());
         invoice.getInvoiceDetails().forEach(i -> i.setInvoice(invoice));
         return invoiceRepository.save(invoice);
     }

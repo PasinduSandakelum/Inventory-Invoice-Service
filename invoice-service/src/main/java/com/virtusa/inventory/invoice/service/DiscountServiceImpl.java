@@ -14,45 +14,44 @@ import com.virtusa.inventory.invoice.repository.DiscountRepository;
 @Service
 public class DiscountServiceImpl implements DiscountService {
 
-	@Autowired
-	private DiscountRepository discountRepository;
-	
-	@Override
-	public List<Discount> fetchAll() {
+    @Autowired
+    private DiscountRepository discountRepository;
 
-		return discountRepository.findAll();
-	}
-	
-	@Override
-	public Optional<Discount> findOne(Integer id) {
+    @Override
+    public List<Discount> fetchAll() {
 
-		Optional<Discount> optional =  discountRepository.findById(id);
+        return discountRepository.findAll();
+    }
 
-		if (optional.isPresent()){
-			return optional;
-		}
-		else {
-			return null;
-		}
+    @Override
+    public Optional<Discount> findOne(Integer id) {
 
-	}
-	
-	@Override
-	public Long getNoOfItems() {
-		return discountRepository.count();
-	}
-	
-	@Override
-	public Discount save(Discount discount) {
+        Optional<Discount> optional = discountRepository.findById(id);
 
-		List<Discount> discounts = discountRepository.findAll();
+        if (optional.isPresent()) {
+            return optional;
+        } else {
+            return null;
+        }
 
-		if (discounts.stream().noneMatch(s-> s.getPriceRange().equals(discount.getPriceRange()))){
-			return discountRepository.save(discount);
-		}else {
-			return null;
+    }
 
-		}
+    @Override
+    public Long getNoOfItems() {
+        return discountRepository.count();
+    }
+
+    @Override
+    public Discount save(Discount discount) {
+
+        List<Discount> discounts = discountRepository.findAll();
+
+        if (discounts.stream().noneMatch(s -> s.getPriceRange().equals(discount.getPriceRange()))) {
+            return discountRepository.save(discount);
+        } else {
+            return null;
+
+        }
 
 //		for (Discount item : discounts) {
 //			if (item.getPriceRange().equals(discount.getPriceRange())) {
@@ -63,39 +62,39 @@ public class DiscountServiceImpl implements DiscountService {
 //			}
 //		}
 
-		//return  discountRepository.save(discount);
-	}
-	
-	@Override
-	public Discount update(Discount discount, Integer id) {
+        //return  discountRepository.save(discount);
+    }
 
-		List<Discount> discounts = discountRepository.findAll();
+    @Override
+    public Discount update(Discount discount, Integer id) {
 
-		if ((discounts.stream().anyMatch(dis -> dis.getId().equals(id))) == true){
+        List<Discount> discounts = discountRepository.findAll();
 
-			Discount discount1 = new Discount();
-			discount1.setId(id);
-			discount1.setPriceRange(discount.getPriceRange());
-			discount1.setDiscount(discount.getDiscount());
-			return discountRepository.save(discount1);
+        if ((discounts.stream().anyMatch(dis -> dis.getId().equals(id))) == true) {
 
-		}else {
+            Discount discount1 = new Discount();
+            discount1.setId(id);
+            discount1.setPriceRange(discount.getPriceRange());
+            discount1.setDiscount(discount.getDiscount());
+            return discountRepository.save(discount1);
 
-			return null;
+        } else {
 
-		}
+            return null;
 
-	}
+        }
 
-	@Override
-	public void delete(Integer id) {
+    }
 
-		discountRepository.deleteById(id);
-	}
-	
-	@Override
-	public void deleteAll() {
-		discountRepository.deleteAll();
-	}
+    @Override
+    public void delete(Integer id) {
+
+        discountRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteAll() {
+        discountRepository.deleteAll();
+    }
 
 }
