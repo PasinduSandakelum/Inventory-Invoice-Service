@@ -24,12 +24,6 @@ public class InvoiceController {
 
     @Autowired
     private InvoiceService invoiceService;
-    
-    
-    @Bean
-    private RestTemplate restTemplate(RestTemplateBuilder builder) {
-    	return builder.build();
-    }
 
     @GetMapping("/invoices")
     public ResponseEntity<List<Invoice>> fetchAll() {
