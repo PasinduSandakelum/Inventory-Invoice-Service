@@ -1,5 +1,11 @@
 package com.virtusa.inventory.invoice.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Transient;
+
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -25,19 +31,22 @@ public class Invoice {
 
     private Integer userId;
 
+    @Transient
+    private LoyaltyCard loyaltyCard;
+
     @OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL)
     private List<InvoiceDetail> invoiceDetails;
 
     //generate invoice code
     @PrePersist
     public void generateCode() {
-        LocalDateTime dateTime= LocalDateTime.now();
-        code = "INV"+dateTime.getYear()+dateTime.getMonthValue()
-                +dateTime.getDayOfYear()
-                +dateTime.getHour()
-                +dateTime.getMinute()
-                +dateTime.getSecond()
-                +dateTime.getNano();
+        LocalDateTime dateTime = LocalDateTime.now();
+        code = "INV" + dateTime.getYear() + dateTime.getMonthValue()
+                + dateTime.getDayOfYear()
+                + dateTime.getHour()
+                + dateTime.getMinute()
+                + dateTime.getSecond()
+                + dateTime.getNano();
     }
 
     public Integer getId() {
@@ -96,6 +105,16 @@ public class Invoice {
         this.userId = userId;
     }
 
+
+    public LoyaltyCard getLoyaltyCard() {
+        return loyaltyCard;
+    }
+
+    public void setLoyaltyCard(LoyaltyCard loyaltyCard) {
+        this.loyaltyCard = loyaltyCard;
+    }
+
+
     public List<InvoiceDetail> getInvoiceDetails() {
         return invoiceDetails;
     }
@@ -103,4 +122,5 @@ public class Invoice {
     public void setInvoiceDetails(List<InvoiceDetail> invoiceDetails) {
         this.invoiceDetails = invoiceDetails;
     }
+
 }
