@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -24,6 +26,9 @@ public class Invoice {
     private Integer customerId;
 
     private Integer userId;
+    
+    @Transient
+    private LoyaltyCard loyaltyCard;
 
     public Integer getId() {
         return id;
@@ -80,4 +85,13 @@ public class Invoice {
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
+
+	public LoyaltyCard getLoyaltyCard() {
+		return loyaltyCard;
+	}
+
+	public void setLoyaltyCard(LoyaltyCard loyaltyCard) {
+		this.loyaltyCard = loyaltyCard;
+	}
+    
 }

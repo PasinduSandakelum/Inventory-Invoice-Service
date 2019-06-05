@@ -2,10 +2,17 @@ package com.virtusa.inventory.invoice.controller;
 
 import com.virtusa.inventory.invoice.model.Invoice;
 import com.virtusa.inventory.invoice.service.InvoiceService;
+
+import org.hibernate.annotations.Loader;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,10 +22,25 @@ public class InvoiceController {
 
     @Autowired
     private InvoiceService invoiceService;
+    
+    
+    @Bean
+    private RestTemplate restTemplate(RestTemplateBuilder builder) {
+    	return builder.build();
+    }
 
     @GetMapping("/invoice")
     public ResponseEntity<List<Invoice>> fetchAll() {
         return ResponseEntity.ok(invoiceService.findAll());
+    }
+    
+    @GetMapping("/invoice/points/{total}")
+    public ResponseEntity<HttpStatus> updateCustomerPoints(@PathVariable BigDecimal total) {
+    	Invoice invoice = new Invoice();
+    	invoice.setId(1);
+    	invoice.setCustomerId(1);
+    	invoiceService.updateCustomerPoints(invoice, total);
+        return ResponseEntity.ok().build();
     }
 
     @PostMapping("/invoice")
