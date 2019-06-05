@@ -12,12 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-<<<<<<< HEAD
 import java.math.BigDecimal;
-=======
 import javax.websocket.server.PathParam;
 import java.util.Date;
->>>>>>> 18c432c69e891ad82660d8d0a1156a7680772ea7
 import java.util.List;
 import java.util.Optional;
 
