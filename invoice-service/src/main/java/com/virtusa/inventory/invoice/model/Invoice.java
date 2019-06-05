@@ -104,15 +104,15 @@ public class Invoice {
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
+    
+	public LoyaltyCard getLoyaltyCard() {
+		return loyaltyCard;
+	}
 
-
-    public LoyaltyCard getLoyaltyCard() {
-        return loyaltyCard;
-    }
-
-    public void setLoyaltyCard(LoyaltyCard loyaltyCard) {
-        this.loyaltyCard = loyaltyCard;
-    }
+	public void setLoyaltyCard(LoyaltyCard loyaltyCard) {
+		this.loyaltyCard = loyaltyCard;
+	}
+    
 
 
     public List<InvoiceDetail> getInvoiceDetails() {
