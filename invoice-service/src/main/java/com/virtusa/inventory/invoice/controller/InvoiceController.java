@@ -6,23 +6,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/emscloud")
+@RequestMapping("/imscloud")
 public class InvoiceController {
 
     @Autowired
     private InvoiceService invoiceService;
 
-    @GetMapping("/invoice")
+    @GetMapping("/invoices")
     public ResponseEntity<List<Invoice>> fetchAll() {
         return ResponseEntity.ok(invoiceService.findAll());
     }
 
+    @GetMapping("/invoice")
+    public ResponseEntity<List<Invoice>> fetchByDate(@PathParam(value = "date") Date date) {
+        return ResponseEntity.ok(invoiceService.findByDate(date));
+    }
+
     @PostMapping("/invoice")
-    public ResponseEntity<Invoice> create(Invoice invoice) {
+    public ResponseEntity<Invoice> create(@RequestBody Invoice invoice) {
         return ResponseEntity.ok(invoiceService.save(invoice));
     }
 
