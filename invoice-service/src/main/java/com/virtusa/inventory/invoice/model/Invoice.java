@@ -104,7 +104,7 @@ public class Invoice {
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
-    
+
 	public LoyaltyCard getLoyaltyCard() {
 		return loyaltyCard;
 	}

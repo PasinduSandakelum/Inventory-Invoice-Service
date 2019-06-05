@@ -1,10 +1,14 @@
 package com.virtusa.inventory.invoice.service;
 
+import java.math.BigDecimal;
 import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Optional;
 import java.util.SortedMap;
 
+import com.virtusa.inventory.invoice.model.Invoice;
+import com.virtusa.inventory.invoice.repository.InvoiceRepository;
+import org.aspectj.weaver.ast.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,44 +18,49 @@ import com.virtusa.inventory.invoice.repository.DiscountRepository;
 @Service
 public class DiscountServiceImpl implements DiscountService {
 
-    @Autowired
-    private DiscountRepository discountRepository;
 
-    @Override
-    public List<Discount> fetchAll() {
+	@Autowired
+	private DiscountRepository discountRepository;
 
-        return discountRepository.findAll();
-    }
+	@Autowired
+	private InvoiceRepository invoiceRepository;
+	
+	@Override
+	public List<Discount> fetchAll() {
 
-    @Override
-    public Optional<Discount> findOne(Integer id) {
+		return discountRepository.findAll();
+	}
+	
+	@Override
+	public Optional<Discount> findOne(Integer id) {
 
-        Optional<Discount> optional = discountRepository.findById(id);
+		Optional<Discount> optional =  discountRepository.findById(id);
 
-        if (optional.isPresent()) {
-            return optional;
-        } else {
-            return null;
-        }
+		if (optional.isPresent()){
+			return optional;
+		}
+		else {
+			return null;
+		}
 
-    }
+	}
+	
+	@Override
+	public Long getNoOfItems() {
+		return discountRepository.count();
+	}
+	
+	@Override
+	public Discount save(Discount discount) {
 
-    @Override
-    public Long getNoOfItems() {
-        return discountRepository.count();
-    }
+		List<Discount> discounts = discountRepository.findAll();
 
-    @Override
-    public Discount save(Discount discount) {
+		if (discounts.stream().noneMatch(s-> s.getPriceRange().equals(discount.getPriceRange()))){
+			return discountRepository.save(discount);
+		}else {
+			return null;
 
-        List<Discount> discounts = discountRepository.findAll();
-
-        if (discounts.stream().noneMatch(s -> s.getPriceRange().equals(discount.getPriceRange()))) {
-            return discountRepository.save(discount);
-        } else {
-            return null;
-
-        }
+		}
 
 //		for (Discount item : discounts) {
 //			if (item.getPriceRange().equals(discount.getPriceRange())) {
@@ -96,5 +105,73 @@ public class DiscountServiceImpl implements DiscountService {
     public void deleteAll() {
         discountRepository.deleteAll();
     }
+
+	public BigDecimal getDiscount(Invoice invoice){
+
+		List<Discount> discounts = discountRepository.findAll();
+		BigDecimal discountedPrice = null;
+
+		for (Discount discount: discounts) {
+			if ( BigDecimal.valueOf(discount.getPriceRange()).compareTo(invoice.getTotal()) <= 0) {
+				discountedPrice = BigDecimal.valueOf(discount.getDiscount()).multiply(invoice.getTotal());
+			}else{
+				return null;
+			}
+		}
+		return discountedPrice;
+	}
+
+	@Override
+	public Double getDiscount(BigDecimal amount){
+
+		List<Discount> discounts = discountRepository.findAll();
+		Double dis = Double.valueOf(0);
+
+
+//		for (Discount discount: discounts) {
+//			if(db <= discount.getPriceRange()){
+//				discountedPrice = discount.getDiscount()*db;
+//				System.out.println("Price Range : "+discount.getPriceRange());
+//				System.out.println("Discount : "+discount.getDiscount());
+//				System.out.println("Discounted Price : "+discount.getDiscount()*db);
+//				break;
+//			}
+//			else{
+//				if (discounts.indexOf(discount)==discounts.size()-1){
+//					return null;
+//				}
+//				else {
+//					continue;
+//				}
+//			}
+//
+//
+//		}
+//		return discountedPrice;
+
+		for (Discount discount: discounts){
+
+			int nextIndex = discounts.indexOf(discount)+1;
+
+			if((amount.compareTo(BigDecimal.valueOf(discount.getPriceRange())) <0)){
+				return dis = Double.valueOf(0);
+			}
+			else if (discounts.indexOf(discount)==discounts.size()-1){
+				if (amount.compareTo(BigDecimal.valueOf(discount.getPriceRange())) >= 0){
+					return discount.getDiscount();
+				}
+				else {
+					return dis = Double.valueOf(0);
+				}
+			}
+			else if((amount.compareTo(BigDecimal.valueOf(discount.getPriceRange())) >= 0) && (amount.compareTo(BigDecimal.valueOf(discounts.get(nextIndex).getPriceRange())) < 0) && (discounts.indexOf(discount)!=discounts.size()-1)){
+				return dis = discount.getDiscount();
+			}
+			else {
+				continue;
+			}
+		}
+		return dis;
+	}
 
 }

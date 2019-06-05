@@ -1,5 +1,6 @@
 package com.virtusa.inventory.invoice.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -109,5 +110,13 @@ public class DiscountConroller {
         discountService.deleteAll();
         return HttpStatus.OK;
 
-    }
+	}
+
+//	@RequestMapping(value = "/discount/test", method = RequestMethod.GET)
+//	public void test() {
+//
+//		BigDecimal total = BigDecimal.valueOf(5000);
+//		System.out.println(discountService.testGetDiscount(total));
+////		return ResponseEntity.ok(discountService.testGetDiscount(total));
+//	}
 }
