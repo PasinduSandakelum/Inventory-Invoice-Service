@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,13 +17,13 @@ import com.virtusa.inventory.invoice.model.InvoiceDetail;
 import com.virtusa.inventory.invoice.service.InvoiceDetailService;
 
 @RestController
-@RequestMapping(value="/item")
+@RequestMapping(value="/imscloud")
 public class InvoiceDetailController {
 
 	@Autowired
 	InvoiceDetailService invoiceDetialService;
 	
-	@RequestMapping(value="/invoiceDetails",method = RequestMethod.POST)
+	@PostMapping("/invoice-detail")
 	public void save(@RequestBody InvoiceDetail invoiceDetail)
 	{
 		invoiceDetialService.save(invoiceDetail);

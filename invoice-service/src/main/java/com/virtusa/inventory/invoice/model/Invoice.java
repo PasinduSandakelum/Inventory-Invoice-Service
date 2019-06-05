@@ -1,20 +1,26 @@
 package com.virtusa.inventory.invoice.model;
 
+<<<<<<< HEAD
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 
+=======
+import javax.persistence.*;
+>>>>>>> 18c432c69e891ad82660d8d0a1156a7680772ea7
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Invoice {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Integer id;
 
+    @Column(unique = true)
     private String code;
 
     private Date date;
@@ -29,6 +35,9 @@ public class Invoice {
     
     @Transient
     private LoyaltyCard loyaltyCard;
+
+    @OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL)
+    private List<InvoiceDetail> invoiceDetails;
 
     public Integer getId() {
         return id;
@@ -86,6 +95,7 @@ public class Invoice {
         this.userId = userId;
     }
 
+<<<<<<< HEAD
 	public LoyaltyCard getLoyaltyCard() {
 		return loyaltyCard;
 	}
@@ -94,4 +104,13 @@ public class Invoice {
 		this.loyaltyCard = loyaltyCard;
 	}
     
+=======
+    public List<InvoiceDetail> getInvoiceDetails() {
+        return invoiceDetails;
+    }
+
+    public void setInvoiceDetails(List<InvoiceDetail> invoiceDetails) {
+        this.invoiceDetails = invoiceDetails;
+    }
+>>>>>>> 18c432c69e891ad82660d8d0a1156a7680772ea7
 }

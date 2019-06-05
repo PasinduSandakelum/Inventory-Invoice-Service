@@ -15,7 +15,7 @@ public interface DiscountService {
 
 	Discount save(Discount discount);
 
-	Discount update(Discount discount);
+	Discount update(Discount discount, Integer id);
 
 	void delete(Integer id);
 

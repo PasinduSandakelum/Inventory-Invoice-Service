@@ -27,9 +27,17 @@ public class RewardPointServiceImpl implements RewardPointService {
 	 */
 	@Override
 	public RewardPoint save(RewardPoint rewardPoint) {
-		return rewardPointRepository.save(rewardPoint); 	
+
+
+		List<RewardPoint> rewardPoints = rewardPointRepository.findAll();
+		if (rewardPoints.stream().noneMatch(point->point.getValue().equals(rewardPoint.getValue()))){
+			return rewardPointRepository.save(rewardPoint);
+		}else {
+			return null;
+		}
+
 	}
-	
+
 	//fetch all rewardPoints 
 	/* (non-Javadoc)
 	 * @see com.virtusa.inventory.invoiceservice.service.RewardPointService#fetchAllRewardPoint()
@@ -52,9 +60,35 @@ public class RewardPointServiceImpl implements RewardPointService {
 	/* (non-Javadoc)
 	 * @see com.virtusa.inventory.invoiceservice.service.RewardPointService#fetchByRewardValue(java.lang.Double)
 	 */
+//	@Override
+//	public List<RewardPoint> fetchByRewardValue(Double value) {
+//		return rewardPointRepository.findByValue(value);
+//	}
+//
 	@Override
-	public List<RewardPoint> fetchByRewardValue(Double value) {
-		return rewardPointRepository.findByValue(value);
+	public RewardPoint update(Integer id, RewardPoint rewardPoint) {
+
+		List<RewardPoint> rewardPoints = rewardPointRepository.findAll();
+
+		if (rewardPoints.stream().anyMatch(point -> point.getValue().equals(rewardPoint.getValue()))) {
+			RewardPoint point = new RewardPoint();
+			point.setId(id);
+			point.setValue(rewardPoint.getValue());
+			point.setPoint(rewardPoint.getPoint());
+
+			return rewardPointRepository.save(point);
+		}else {
+			return null;
+		}
+
 	}
-	
+
+
+	@Override
+	public void delete(Integer id){
+		rewardPointRepository.deleteById(id);
+	}
+
+
 }
+
