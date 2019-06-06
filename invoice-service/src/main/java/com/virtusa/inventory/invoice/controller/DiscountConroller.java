@@ -114,11 +114,11 @@ public class DiscountConroller {
 
 	}
 
-//	@RequestMapping(value = "/discount/test", method = RequestMethod.GET)
-//	public void test() {
-//
-//		BigDecimal total = BigDecimal.valueOf(5000);
-//		System.out.println(discountService.testGetDiscount(total));
-////		return ResponseEntity.ok(discountService.testGetDiscount(total));
-//	}
+	@RequestMapping(value = "/discount/test", method = RequestMethod.GET)
+	public void test(@RequestBody Double aDouble) {
+
+		BigDecimal total = BigDecimal.valueOf(aDouble);
+		System.out.println(discountService.getDiscount(total));
+//		return ResponseEntity.ok(discountService.testGetDiscount(total));
+	}
 }

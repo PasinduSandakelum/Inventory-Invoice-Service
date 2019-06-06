@@ -5,6 +5,7 @@ import java.sql.SQLOutput;
 import java.util.List;
 import java.util.Optional;
 import java.util.SortedMap;
+import java.util.stream.Collectors;
 
 import com.virtusa.inventory.invoice.model.Invoice;
 import com.virtusa.inventory.invoice.repository.InvoiceRepository;
@@ -61,16 +62,6 @@ public class DiscountServiceImpl implements DiscountService {
 
 		}
 
-//		for (Discount item : discounts) {
-//			if (item.getPriceRange().equals(discount.getPriceRange())) {
-//				matched = true;
-//				break;
-//			} else {
-//				matched = false;
-//			}
-//		}
-
-		//return  discountRepository.save(discount);
 	}
 	
 	@Override
@@ -123,30 +114,12 @@ public class DiscountServiceImpl implements DiscountService {
 	@Override
 	public Double getDiscount(BigDecimal amount){
 
-		List<Discount> discounts = discountRepository.findAll();
+		//List<Discount> discounts = discountRepository.findAll();
+		List<Discount> discounts = discountRepository.findAll().stream()
+				.sorted((val1,val2)-> val1.getPriceRange().compareTo(val2.getPriceRange()))
+				.collect(Collectors.toList());
 		Double dis = Double.valueOf(0);
 
-
-//		for (Discount discount: discounts) {
-//			if(db <= discount.getPriceRange()){
-//				discountedPrice = discount.getDiscount()*db;
-//				System.out.println("Price Range : "+discount.getPriceRange());
-//				System.out.println("Discount : "+discount.getDiscount());
-//				System.out.println("Discounted Price : "+discount.getDiscount()*db);
-//				break;
-//			}
-//			else{
-//				if (discounts.indexOf(discount)==discounts.size()-1){
-//					return null;
-//				}
-//				else {
-//					continue;
-//				}
-//			}
-//
-//
-//		}
-//		return discountedPrice;
 
 		for (Discount discount: discounts){
 
