@@ -1,5 +1,6 @@
 package com.virtusa.inventory.invoice.service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +27,6 @@ public interface RewardPointService {
 	//delete the reward point
 	void delete(Integer id);
 
-
+	Double getRewardPoint(BigDecimal total);
 
 }

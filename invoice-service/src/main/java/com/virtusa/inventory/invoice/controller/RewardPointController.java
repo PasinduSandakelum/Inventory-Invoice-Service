@@ -1,5 +1,6 @@
 package com.virtusa.inventory.invoice.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -76,6 +77,13 @@ public class RewardPointController {
 		rewardPointService.delete(id);
 		return HttpStatus.OK;
 
+	}
+
+
+	//fetch all reward points
+	@RequestMapping(value = "/rewardpoint/value", method = RequestMethod.POST)
+	public ResponseEntity<?> fetchreward(@RequestBody BigDecimal value) {
+		return ResponseEntity.ok(rewardPointService.getRewardPoint(value));
 	}
 
 }
