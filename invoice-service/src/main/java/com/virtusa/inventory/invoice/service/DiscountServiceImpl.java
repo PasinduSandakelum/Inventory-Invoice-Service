@@ -19,6 +19,7 @@ import com.virtusa.inventory.invoice.repository.DiscountRepository;
 @Service
 public class DiscountServiceImpl implements DiscountService {
 
+
 	@Autowired
 	private DiscountRepository discountRepository;
 
@@ -62,39 +63,50 @@ public class DiscountServiceImpl implements DiscountService {
 
 		}
 
-	}
-	
-	@Override
-	public Discount update(Discount discount, Integer id) {
 
-		List<Discount> discounts = discountRepository.findAll();
+//		for (Discount item : discounts) {
+//			if (item.getPriceRange().equals(discount.getPriceRange())) {
+//				matched = true;
+//				break;
+//			} else {
+//				matched = false;
+//			}
+//		}
 
-		if ((discounts.stream().anyMatch(dis -> dis.getId().equals(id))) == true){
+        //return  discountRepository.save(discount);
+    }
 
-			Discount discount1 = new Discount();
-			discount1.setId(id);
-			discount1.setPriceRange(discount.getPriceRange());
-			discount1.setDiscount(discount.getDiscount());
-			return discountRepository.save(discount1);
+    @Override
+    public Discount update(Discount discount, Integer id) {
 
-		}else {
+        List<Discount> discounts = discountRepository.findAll();
 
-			return null;
+        if ((discounts.stream().anyMatch(dis -> dis.getId().equals(id))) == true) {
 
-		}
+            Discount discount1 = new Discount();
+            discount1.setId(id);
+            discount1.setPriceRange(discount.getPriceRange());
+            discount1.setDiscount(discount.getDiscount());
+            return discountRepository.save(discount1);
 
-	}
+        } else {
 
-	@Override
-	public void delete(Integer id) {
+            return null;
 
-		discountRepository.deleteById(id);
-	}
-	
-	@Override
-	public void deleteAll() {
-		discountRepository.deleteAll();
-	}
+        }
+
+    }
+
+    @Override
+    public void delete(Integer id) {
+
+        discountRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteAll() {
+        discountRepository.deleteAll();
+    }
 
 	public BigDecimal getDiscount(Invoice invoice){
 

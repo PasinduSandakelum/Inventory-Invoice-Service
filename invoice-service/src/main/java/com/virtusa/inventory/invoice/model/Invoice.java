@@ -8,13 +8,14 @@ import javax.persistence.Transient;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
 @Entity
 public class Invoice {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(unique = true)
@@ -29,12 +30,24 @@ public class Invoice {
     private Integer customerId;
 
     private Integer userId;
-    
+
     @Transient
     private LoyaltyCard loyaltyCard;
 
     @OneToMany(mappedBy = "invoice", cascade = CascadeType.ALL)
     private List<InvoiceDetail> invoiceDetails;
+
+    //generate invoice code
+    @PrePersist
+    public void generateCode() {
+        LocalDateTime dateTime = LocalDateTime.now();
+        code = "INV" + dateTime.getYear() + dateTime.getMonthValue()
+                + dateTime.getDayOfYear()
+                + dateTime.getHour()
+                + dateTime.getMinute()
+                + dateTime.getSecond()
+                + dateTime.getNano();
+    }
 
     public Integer getId() {
         return id;
@@ -100,6 +113,7 @@ public class Invoice {
 		this.loyaltyCard = loyaltyCard;
 	}
     
+
 
     public List<InvoiceDetail> getInvoiceDetails() {
         return invoiceDetails;
