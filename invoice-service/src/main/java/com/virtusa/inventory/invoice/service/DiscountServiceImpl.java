@@ -108,21 +108,6 @@ public class DiscountServiceImpl implements DiscountService {
         discountRepository.deleteAll();
     }
 
-	public BigDecimal getDiscount(Invoice invoice){
-
-		List<Discount> discounts = discountRepository.findAll();
-		BigDecimal discountedPrice = null;
-
-		for (Discount discount: discounts) {
-			if ( BigDecimal.valueOf(discount.getPriceRange()).compareTo(invoice.getTotal()) <= 0) {
-				discountedPrice = BigDecimal.valueOf(discount.getDiscount()).multiply(invoice.getTotal());
-			}else{
-				return null;
-			}
-		}
-		return discountedPrice;
-	}
-
 	@Override
 	public Double getDiscount(BigDecimal amount){
 
