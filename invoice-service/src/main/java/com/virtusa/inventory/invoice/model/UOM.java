@@ -12,15 +12,8 @@ import javax.persistence.OneToMany;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class UOM {
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column(unique = true)
 	private String name;
-	
-	@OneToMany(mappedBy = "uom" , cascade = CascadeType.ALL)
-	@JsonIgnore
 	private Set<Item> items;
 
 	public Integer getId() {

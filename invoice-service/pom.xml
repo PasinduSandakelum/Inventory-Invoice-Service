@@ -16,7 +16,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-       <!-- <spring-cloud.version>Greenwich.SR1</spring-cloud.version> --> 
+        <spring-cloud.version>Greenwich.SR1</spring-cloud.version>
     </properties>
 
     <dependencies>
@@ -39,17 +39,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- <dependency>
+        <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-oauth2</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-security</artifactId>
-		</dependency>   -->
+		</dependency>
        
     </dependencies>
-    <!--  <dependencyManagement>
+     <dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
@@ -59,7 +59,7 @@
 				<scope>import</scope>
 			</dependency>
 		</dependencies>
-	</dependencyManagement>  -->
+	</dependencyManagement>
    
 	
     <build>
