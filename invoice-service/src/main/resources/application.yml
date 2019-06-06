@@ -1,5 +1,4 @@
 
-
 #server:
 #  port: 8080
   
@@ -10,13 +9,18 @@ spring:
     url: jdbc:mysql://localhost:3306/invoicedb?createDatabaseIfNotExist=true
     username: root
     password: 1qaz2wsx@
+
     driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
   jpa:
     hibernate:
-      ddl-auto: create
-    show-sql: true
-    
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
 
 #  application:
 #    name: item
@@ -31,4 +35,3 @@ spring:
 #                client:
 #                  client-id: web
 #                  client-secret: web
-    
