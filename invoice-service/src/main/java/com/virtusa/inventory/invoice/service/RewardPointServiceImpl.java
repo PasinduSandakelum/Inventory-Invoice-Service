@@ -1,7 +1,12 @@
 package com.virtusa.inventory.invoice.service;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,11 +21,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class RewardPointServiceImpl implements RewardPointService {
-	
+
 	@Autowired
 	RewardPointRepository rewardPointRepository;
-	
-	
+
+
 	//save the rewardPoints
 	/* (non-Javadoc)
 	 * @see com.virtusa.inventory.invoiceservice.service.RewardPointService#save(com.virtusa.inventory.invoiceservice.model.RewardPoint)
@@ -30,9 +35,9 @@ public class RewardPointServiceImpl implements RewardPointService {
 
 
 		List<RewardPoint> rewardPoints = rewardPointRepository.findAll();
-		if (rewardPoints.stream().noneMatch(point->point.getValue().equals(rewardPoint.getValue()))){
+		if (rewardPoints.stream().noneMatch(point -> point.getValue().equals(rewardPoint.getValue()))) {
 			return rewardPointRepository.save(rewardPoint);
-		}else {
+		} else {
 			return null;
 		}
 
@@ -46,7 +51,7 @@ public class RewardPointServiceImpl implements RewardPointService {
 	public List<RewardPoint> fetchAllRewardPoint() {
 		return rewardPointRepository.findAll();
 	}
-	
+
 	//fetch reward point relevant to the id
 	/* (non-Javadoc)
 	 * @see com.virtusa.inventory.invoiceservice.service.RewardPointService#fetchById(java.lang.Integer)
@@ -55,7 +60,7 @@ public class RewardPointServiceImpl implements RewardPointService {
 	public Optional<RewardPoint> fetchById(Integer id) {
 		return rewardPointRepository.findById(id);
 	}
-	
+
 	//fetch by reward value
 	/* (non-Javadoc)
 	 * @see com.virtusa.inventory.invoiceservice.service.RewardPointService#fetchByRewardValue(java.lang.Double)
@@ -77,18 +82,45 @@ public class RewardPointServiceImpl implements RewardPointService {
 			point.setPoint(rewardPoint.getPoint());
 
 			return rewardPointRepository.save(point);
-		}else {
+		} else {
 			return null;
 		}
 
 	}
 
-
 	@Override
-	public void delete(Integer id){
+	public void delete(Integer id) {
 		rewardPointRepository.deleteById(id);
 	}
 
+	@Override
+	public Double getRewardPoint(BigDecimal amount) {
 
+		List<RewardPoint> rewardPoints = rewardPointRepository.findAll();
+
+		//BigDecimal total = new BigDecimal(2500);
+		RewardPoint point = new RewardPoint();
+
+		rewardPoints = rewardPoints.stream()
+				.sorted(Comparator.comparing(RewardPoint::getValue))
+				.filter(p -> amount.compareTo(BigDecimal.valueOf(p.getValue())) >= 0)
+				.collect(Collectors.toList());
+
+		point = rewardPoints.get(rewardPoints.size() - 1);
+
+
+//        List<Integer> points = new ArrayList<>();
+//        pointList.forEach(System.out::println);
+
+//        reward.entrySet().stream()
+//                .filter(p -> p.getValue().intValue() > total.intValue())
+//                .peek(v-> points.add(v.getKey()))
+//                .findFirst()
+//                .get();
+		return point.getPoint();
+		//.getPoint());
+
+	}
 }
+
 
