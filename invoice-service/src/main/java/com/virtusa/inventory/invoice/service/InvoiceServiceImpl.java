@@ -1,9 +1,12 @@
 package com.virtusa.inventory.invoice.service;
 
 import java.math.BigDecimal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Optional;
 
+import com.virtusa.inventory.invoice.criteria.InvoiceCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -62,7 +65,17 @@ public class InvoiceServiceImpl implements InvoiceService {
 	}
 
     @Override
-    public List<Invoice> findByDate(Date date) {
+    public List<Invoice> findByDate(InvoiceCriteria invoiceSearch) throws ParseException {
+		/*Date date = null;
+		try {
+			date = new SimpleDateFormat("yyyy-MM-dd").parse("2019-06-06");
+		} catch (ParseException e) {
+			date = new Date();
+			System.out.println(date+": today");
+		}*/
+
+		Date date = new SimpleDateFormat("yyyy-MM-dd").parse(invoiceSearch.getBillDate().toInstant().toString());
+		System.out.println(date.toString());
         return invoiceRepository.findByDate(date);
     }
 

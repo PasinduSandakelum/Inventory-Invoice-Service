@@ -1,5 +1,6 @@
 package com.virtusa.inventory.invoice.controller;
 
+import com.virtusa.inventory.invoice.criteria.InvoiceCriteria;
 import com.virtusa.inventory.invoice.model.Invoice;
 import com.virtusa.inventory.invoice.service.InvoiceService;
 
@@ -14,6 +15,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.math.BigDecimal;
 import javax.websocket.server.PathParam;
+import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -39,9 +41,9 @@ public class InvoiceController {
         return ResponseEntity.ok().build();
     }
 
-    @GetMapping("/invoice")
-    public ResponseEntity<List<Invoice>> fetchByDate(@PathParam(value = "date") Date date) {
-        return ResponseEntity.ok(invoiceService.findByDate(date));
+    @PostMapping("/invoice/search")
+    public ResponseEntity<List<Invoice>> fetchByDate(@RequestBody InvoiceCriteria invoiceCriteria) throws ParseException {
+        return ResponseEntity.ok(invoiceService.findByDate(invoiceCriteria));
     }
 
     @PostMapping("/invoice")
